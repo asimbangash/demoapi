@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const MenRanking = require("../models/mens");
 
+router.get("/", (req, res)=>{
+    res.send("hello");
+})
+
 router.post("/mens", async(req, res)=>{
     try {
         const addingMens = new MenRanking(req.body);
