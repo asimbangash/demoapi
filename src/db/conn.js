@@ -1,10 +1,11 @@
 const mongoose  = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/olympics",{
+mongoose.connect("mongodb+srv://asim:admin@test.bssnegc.mongodb.net/test?retryWrites=true&w=majority",{
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(()=>{
     console.log("connection sucessfuly....");
 }).catch((e)=>{
     console.log("Not Connected");
+    console.log(e);
 });
